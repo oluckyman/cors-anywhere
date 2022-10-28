@@ -1,0 +1,6 @@
+services:
+  cors-anywhere:
+    image: cors-anywhere
+    container_name: cors-anywhere-container
+    ports:
+      - 8080:8080

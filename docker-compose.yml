@@ -1,0 +1,12 @@
+services:
+  cors-anywhere:
+    container_name: cors-anywhere-container
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    volumes:
+      - .:/usr/src/app
+    command: npm run start:dev
+    ports:
+      - 8080:8080
