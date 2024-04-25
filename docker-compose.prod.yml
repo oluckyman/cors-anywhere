@@ -2,5 +2,12 @@ services:
   cors-anywhere:
     image: cors-anywhere
     container_name: cors-anywhere-container
-    ports:
-      - 8080:8080
+    restart: unless-stopped
+    # ports:
+    #   - 12345:8080 # no need to expose to the host machine because caddy will access it within hot64 network
+    networks:
+      - host64
+
+networks:
+  host64:
+    name: host64

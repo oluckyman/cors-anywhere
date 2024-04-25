@@ -1,0 +1,8 @@
+north.belsky.in {
+    reverse_proxy cors-anywhere-container:8080
+}
+
+# north.belsky.in {
+#   root * /usr/share/caddy
+#   file_server
+# }
